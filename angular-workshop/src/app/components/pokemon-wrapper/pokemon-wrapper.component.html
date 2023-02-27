@@ -1,3 +1,4 @@
 <div class="row">
+  <app-pokemon-selector></app-pokemon-selector>
   <app-pokemon-view *ngFor="let poke of (pokemons | async)" class="col-3 mb-3" [pokemon]="poke"></app-pokemon-view>
 </div>

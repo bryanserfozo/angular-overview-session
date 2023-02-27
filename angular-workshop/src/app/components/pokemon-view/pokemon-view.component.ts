@@ -10,6 +10,7 @@ export class PokemonViewComponent implements OnInit {
 
 
   @Input() pokemon:Pokemon ={
+    id: 1,
     name: 'Ditto',
     imgSrc: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png', // .other.official-artwork.front_default
     weight: 340, // .weight
@@ -26,6 +27,10 @@ export class PokemonViewComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  goToPokemonIndex():void {
+
   }
 
 }

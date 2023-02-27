@@ -2,7 +2,8 @@ export interface Pokemon {
   name: string,
     imgSrc: string, // .other.official-artwork.front_default
     weight: number, // .weight
-    height: number
+    height: number,
+    id: number
 }
 
 export interface Ability2 {

@@ -7,13 +7,15 @@ import { PokemonViewComponent } from './components/pokemon-view/pokemon-view.com
 import { PokemonSelectorComponent } from './components/pokemon-selector/pokemon-selector.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PokemonWrapperComponent } from './components/pokemon-wrapper/pokemon-wrapper.component';
+import { PokemonDetailedViewComponent } from './components/pokemon-detailed-view/pokemon-detailed-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PokemonViewComponent,
     PokemonSelectorComponent,
-    PokemonWrapperComponent
+    PokemonWrapperComponent,
+    PokemonDetailedViewComponent
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,8 @@
 <div class="card" >
   <img src="{{pokemon.imgSrc}}" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">{{pokemon.name}}</h5>
-    <p class="card-text">Height: {{pokemon.height}}</p>
-    <p class="card-text">Weight: {{pokemon.weight}}</p>
+  <div class="card-body text-center">
+    <a class="card-title" [routerLink]="['/pokemon', pokemon.id]">{{pokemon.name}}</a>
+    <!-- <p class="card-text">Height: {{pokemon.height}}</p>
+    <p class="card-text">Weight: {{pokemon.weight}}</p> -->
   </div>
 </div>
