@@ -1,6 +1,10 @@
 <h2>{{ hero.name}} Details</h2>
 
 <div><span> id: </span> {{ hero.id}}</div>
-/*Changes to uppercase*/
-<div><span> name: </span> {{ hero.name | uppercase}}</div>
+<!-- Changes to uppercase -->
+<!-- <div><span> name: </span> {{ hero.name | uppercase}}</div> -->
+<div>
+    <label> name: </label> 
+    <input [(ngModel)] = "hero.name" placeholder="name">
+</div>
 
