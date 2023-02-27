@@ -15,14 +15,14 @@ export class PokemonService {
 
   async search(name: string) {
     let options = new HttpHeaders().set('Content-Type', 'application/json')
-    this.httpClient.get<Sprites>(`https://pokeapi.co/api/v2/pokemon/${name}`, { headers: options })
+    this.httpClient.get<IPokemonResult>(`https://pokeapi.co/api/v2/pokemon/${name}`, { headers: options })
       .pipe(
-        catchError(this.errorHandler<Sprites>('search'))
+        catchError(this.errorHandler<IPokemonResult>('search'))
       ).subscribe((data) => {
         this.pokemon = [];
 
         let p: IPokemon = {
-          sprite: data.front_default
+          sprite: data.sprites.front_default
         }
         
         this.pokemon.push(p);
