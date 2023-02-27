@@ -1,0 +1,32 @@
+
+<h2>Winning Numbers</h2>
+<ul class="tickets">
+<li *ngFor="let ticket of ticket">
+    <button [class.selected]="ticket === selectedTicket"
+    type="button" (click)="onSelect(ticket)"> 
+    <span class="ticket-id">{{ticket.id}}</span>
+    <span class="picks">{{ticket.picks}}</span>
+    <span class="type">{{ticket.type}}</span>
+    </button>
+</li>
+
+
+</ul>
+
+
+<div *ngIf="selectedTicket"> 
+    <h2>{{selectedTicket.type | uppercase}} Details</h2>
+    <div>
+        id: {{selectedTicket.id}} </div>
+        <div>
+            <label for="type">Ticket type:</label>
+         <input id="type" [(ngModel)]="selectedTicket.type" placeholder="Type">
+        </div>
+    
+</div>
+
+
+
+
+
+
