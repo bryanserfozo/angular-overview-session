@@ -1,10 +1,9 @@
-<h2>{{ heroes[0].name}} Details</h2>
+<h2>My Heroes</h2>
 
-<div><span> id: </span> {{ heroes[0].id}}</div>
-<!-- Changes to uppercase -->
-<!-- <div><span> name: </span> {{ hero.name | uppercase}}</div> -->
-<div>
-    <label> name: </label> 
-    <input [(ngModel)] = "heroes[0].name" placeholder="name">
-</div>
+<ul class="heroes">
+    <!-- reference each hero and bind them -->
+    <li *ngFor="let hero of heroes" (click)="onSelect(hero)">
+        <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </li>
+</ul>
 
