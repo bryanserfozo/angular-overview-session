@@ -1,0 +1,9 @@
+<p>forcast-view works!</p>
+<app-search></app-search>
+<div *ngFor= "let day of forcast" border-style="solid" border-width="1px">
+    <h2>Weather for {{day.date}}</h2>
+    {{day.min}}
+    {{day.max}}
+    {{day.humidity}}
+    {{day.maxFeel}}
+</div>
