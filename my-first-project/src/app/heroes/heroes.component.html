@@ -1,5 +1,12 @@
 <h2>My Heroes</h2>
 
+<!-- If there is a selected hero, then display -->
+<div *ngIf="selectedHero">
+    <h2>{{ selectedHero.name | uppercase }} Details</h2>
+    <div><span>id: </span> {{ selectedHero.id}}</div>
+</div>
+
+
 <ul class="heroes">
     <!-- reference each hero and bind them -->
     <li *ngFor="let hero of heroes" (click)="onSelect(hero)">
