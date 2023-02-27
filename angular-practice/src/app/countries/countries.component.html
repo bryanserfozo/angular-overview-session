@@ -1,1 +1,16 @@
-<h2>Get Country Information Here</h2>
+<h2>Get the capital of a country here</h2>
+<div>https://www.wikidata.org/wiki/ go here to find ids to use</div>
+<input
+  type="text"
+  placeholder="country id (native id or wikiDataId)"
+  name="country"
+  [(ngModel)]="countryId"
+/>
+<button (click)="handleClick()">Search</button>
+
+<div *ngIf="country">
+  <div>
+    {{ country.name }}
+  </div>
+  <div>{{ country.capital }}</div>
+</div>

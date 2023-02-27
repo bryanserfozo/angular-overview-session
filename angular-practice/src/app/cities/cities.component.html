@@ -1,1 +1,16 @@
-<h2>Get City Information Here</h2>
+<h2>Get the longitude and latitude of cities</h2>
+<div>https://www.wikidata.org/wiki/ go here to find ids to use</div>
+<input
+  type="text"
+  placeholder="city id (native id or wikiDataId)"
+  name="city"
+  [(ngModel)]="cityId"
+/>
+<button (click)="handleClick()">Search</button>
+
+<div *ngIf="city">
+  <div>
+    {{ city.name }}
+  </div>
+  <div>{{ city.longitude }}, {{ city.latitude }}</div>
+</div>
