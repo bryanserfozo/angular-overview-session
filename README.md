@@ -1,9 +1,27 @@
-# Angular Overview Session
+# TourOfHeroes
 
-This is the repository associated with the 2/27/2023 Angular Overview session for associates in staging. Here, you'll upload your work for the day so we can keep track of your individual progress.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
 
-If you've never utilized Angular before, please make sure you install it with `npm install -g @angular/cli` and start up a new application with `ng new app-name`. You can then access this application and view your live changes using `ng serve --open`. For today, you'll be following along with the tour of heroes tutorial which should give you a good overview of a lot of what angular has to offer. Follow along the tutorial [here](https://angular.io/tutorial/tour-of-heroes/toh-pt1) to get started. You should try to get as far as you can over the time we have alotted.
+## Development server
 
-If you've utlized Angular before, now is the time to have some fun and build something you find interesting. There are 2 requirements for your application today. The first is that there must be at least 2 pages that you route between without refreshing the page. The second requirement is that you have an api call somewhere in your applcation. This call can be to any api, but I recommend looking on [RapidApi](https://rapidapi.com/hub) for some good ones. Styling should come after this so try to make it look good after it is functional.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-No matter what group you're in, you'll be submitting your work at 5 pm EST today (2/27/2023) to this repository. Just make a new branch with `git checkout -b firstname-lastname` and push up your work at the end of the day. Those willing can demonstrate what they were able to accomplish during the work time.
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
