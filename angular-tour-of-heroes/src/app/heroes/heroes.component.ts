@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import {Hero} from '../hero'
-import { HEROES } from '../mock-heroes';
 import { HeroService } from '../hero.service';
-import { Observable, of } from 'rxjs';
+import { MessageService } from '../message.service';
 
 
 @Component({
@@ -12,22 +11,21 @@ import { Observable, of } from 'rxjs';
 })
 export class HeroesComponent {
   heroes: Hero[] = [];
+  selectedHero?: Hero;
 
-  constructor(private heroService:HeroService){}
+  constructor(private heroService:HeroService, private messageService:MessageService){}
+  
+  ngOnInit(): void{
+    this.getHeros();
+  }
+
+  onSelect(hero:Hero): void{
+    this.selectedHero=hero;
+    this.messageService.add(`HeroesComponent: Select hero id=${hero.id}`)
+  }
 
   getHeros(): void{
     this.heroService.getHeros().subscribe(heroes=> this.heroes =heroes);
   }
-
-  ngOnInit(): void{
-    this.getHeros();
-  }
-  
-
-  selectedHero?: Hero;
-  onSelect(hero:Hero): void{
-    this.selectedHero=hero;
-  }
-  
 
 }
